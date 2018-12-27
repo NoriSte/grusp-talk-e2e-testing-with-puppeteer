@@ -3,6 +3,7 @@
 Scrape the latest 40 URLs from Google searching for the "bitcoin" query
 */
 
+const puppeteer = require('puppeteer');
 
 const scrapeGoogle = async (options) => {
   const defaultOptions = {
@@ -11,6 +12,7 @@ const scrapeGoogle = async (options) => {
     query: 'bitcoin'
   };
   options = {...defaultOptions, ...options};
+  const browser = await puppeteer.launch({headless: false});
   const page = await browser.newPage();
 
   const resultSelector = 'div.g .r>a';
@@ -45,7 +47,7 @@ const scrapeGoogle = async (options) => {
   }
 
   const result = await scraping();
-  await page.close();
+  await browser.close();
   return result;
 }
 

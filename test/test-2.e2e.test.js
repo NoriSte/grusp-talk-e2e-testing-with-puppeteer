@@ -2,14 +2,16 @@
  * Test 2
  */
 
+const puppeteer = require('puppeteer');
 const path = require('path');
 let page;
 
 beforeAll(async () => {
+  browser = await puppeteer.launch({headless: false});
   page = await browser.newPage();
 });
 afterAll(async () => {
-  await page.close();
+  await browser.close();
 });
 
 describe(`That's our second E2E test`, () => {
