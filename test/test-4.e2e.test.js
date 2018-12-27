@@ -7,7 +7,7 @@ const path = require('path');
 let page;
 
 beforeAll(async () => {
-  browser = await puppeteer.launch({headless: false});
+  browser = await puppeteer.launch({headless: false, slowMo: 200});
   page = await browser.newPage();
 });
 afterAll(async () => {
