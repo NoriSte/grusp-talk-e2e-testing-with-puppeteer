@@ -12,7 +12,7 @@ const scrapeGoogle = async (options) => {
     query: 'bitcoin'
   };
   options = {...defaultOptions, ...options};
-  browser = await puppeteer.launch({headless: false, slowMo: 200});
+  browser = await puppeteer.launch({headless: false, slowMo: 0});
   const page = await browser.newPage();
 
   const resultSelector = 'div.g .r>a';

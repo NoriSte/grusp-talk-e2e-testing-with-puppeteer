@@ -7,7 +7,7 @@ const path = require('path');
 let page;
 
 beforeAll(async () => {
-  browser = await puppeteer.launch({headless: false, slowMo: 200});
+  browser = await puppeteer.launch({headless: false, slowMo: 0});
   page = await browser.newPage();
 });
 afterAll(async () => {
@@ -41,6 +41,6 @@ describe(`Test 4`, () => {
     await page.click('[data-test="button"]');
 
     // check for a specific content is a good way to be 100% sure that the page is been loaded
-    await expect(page).toMatch('Hello from FETI');
+    await expect(page).toMatch('Hello from PUG MI');
   }, 5000);
 });

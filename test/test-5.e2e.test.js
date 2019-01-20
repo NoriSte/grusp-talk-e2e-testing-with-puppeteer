@@ -7,7 +7,7 @@ const path = require('path');
 let page;
 
 beforeAll(async () => {
-  browser = await puppeteer.launch({headless: false, slowMo: 200});
+  browser = await puppeteer.launch({headless: false, slowMo: 0});
   page = await browser.newPage();
 });
 afterAll(async () => {
@@ -20,10 +20,10 @@ describe(`Test 5`, () => {
   const itemSelector = '#app li';
   const removeItemSelector = '#app li button';
   const todos = [
-    'Subscribe to the FETI workswhop',
-    'Attend the FETI workshop',
+    'Subscribe to the PUGMI meetup',
+    'Attend the PUGMI meetup',
     'Pass this test',
-    'Join the FETI volunteers'
+    'Join the PUGMI volunteers'
   ];
 
   const addTodo = async (todo) => {
@@ -66,6 +66,6 @@ describe(`Test 5`, () => {
 
   test(`Check the remaining todos directly from the store`, async () => {
     const state = await page.evaluate(() => window.vueInstance.$store.state.todos);
-    expect(state.map(item => item.text)).toEqual(['Pass this test', 'Join the FETI volunteers']);
+    expect(state.map(item => item.text)).toEqual(['Pass this test', 'Join the PUGMI volunteers']);
   }, 10000);
 });

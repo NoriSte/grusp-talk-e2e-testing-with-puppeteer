@@ -1,7 +1,7 @@
 {
-  "name": "feti-workshop-e2e-testing-with-puppeteer",
+  "name": "grusp-talk-e2e-testing-with-puppeteer",
   "version": "1.0.0",
-  "description": "A project built for a FETI workshop",
+  "description": "A project built for a PUGMI meetup",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NoriSte/feti-workshop-e2e-testing-with-puppeteer.git"
+    "url": "git+https://github.com/NoriSte/grusp-talk-e2e-testing-with-puppeteer.git"
   },
   "author": "Stefano Magni (@NoriSte)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NoriSte/feti-workshop-e2e-testing-with-puppeteer/issues"
+    "url": "https://github.com/NoriSte/grusp-talk-e2e-testing-with-puppeteer/issues"
   },
-  "homepage": "https://github.com/NoriSte/feti-workshop-e2e-testing-with-puppeteer#readme",
+  "homepage": "https://github.com/NoriSte/grusp-talk-e2e-testing-with-puppeteer#readme",
   "dependencies": {},
   "devDependencies": {
     "jest": "^23.4.2",
